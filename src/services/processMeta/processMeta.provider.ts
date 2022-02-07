@@ -1,8 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 
 @Injectable()
 export class ProcessMetaProvider {
-  getHello(): string {
-    return 'Hello World!';
+  private readonly logger = new Logger(ProcessMetaProvider.name);
+
+  async processMetaData(): Promise<void> {
+    this.logger.log('Entering for processing meta data');
   }
 }

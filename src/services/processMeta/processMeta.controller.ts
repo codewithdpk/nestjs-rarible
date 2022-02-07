@@ -5,8 +5,8 @@ import { ProcessMetaProvider } from './processMeta.provider';
 export class ProcessMetaController {
   constructor(private readonly processMetaProvider: ProcessMetaProvider) {}
 
-  @Get("process-meta")
-  getHello(): string {
-    return this.processMetaProvider.getHello();
+  @Get('process-meta')
+  processMetaData(): Promise<void> {
+    return this.processMetaProvider.processMetaData();
   }
 }
